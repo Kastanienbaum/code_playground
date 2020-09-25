@@ -11,6 +11,8 @@ raw_data = 0x12340567890A
 
 #print(ord(var_c), truncated)
 
+# example 1 
+
 print(hex(raw_data))
 
 new_bytes = 0x0000000000
@@ -22,3 +24,5 @@ new_bytes |= (raw_data & 0x000000FFFF00) >> 4
 new_bytes |= (raw_data & 0x00000000000F)  
 
 print(hex(new_bytes))
+
+# EOF 
