@@ -19,6 +19,7 @@ from math import gcd as bltin_gcd
 encryption_numbers = (5, 14)  # example number pairs: (5, 14), (159, 187), (1979, 2093)
 decryption_numbers = (11, 14) # example number pairs: (11, 14), (159, 187), (3959, 2093). 
 plain_message = '12' # value of plain message must be smaller than 2nd number in pair above 
+#plain_message = ord('C')
 
 # The following lines are identical. 
 # However, pow() performs the operation more efficiently, according to python docs. 
