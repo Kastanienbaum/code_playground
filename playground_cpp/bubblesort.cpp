@@ -1,5 +1,5 @@
 /*
-bubblesort algorithm  
+bubblesort algorithm
 */
 
 #include <cstdlib>
