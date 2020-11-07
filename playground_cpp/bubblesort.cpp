@@ -25,6 +25,11 @@ int main(int argc, char const *argv[])
 	}
 
 	int *p1 = new int[arraysize]; 
+	if (p1 == NULL)
+	{
+		cout << "Could not allocate memory"; 
+		return 1; 
+	}
 
 	for (int i = 0; i < arraysize; ++i)
 	{
@@ -60,8 +65,8 @@ int main(int argc, char const *argv[])
 	for (int i = 0; i < arraysize; ++i){cout << *(p1+i) << " ";}
 	cout << endl; 
 
-	delete p1; 
-	delete p2; 
+	delete[] p1; 
+	delete[] p2; 
 
 	return 0;
 }
