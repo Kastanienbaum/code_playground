@@ -1,44 +1,43 @@
 /*
 Linked List in C++
+
+https://www.youtube.com/watch?v=vcQIFT79_50
+https://www.learn-cpp.org/en/Linked_lists
+
 */
 
 #include <iostream>
 
 using namespace std; 
 
-class LinkedList
+struct Node
+{
+	int item; 
+	struct Node* next; 
+} node;
+
+class MyLinkedList
 {
 	// members declared before the first access specifier are automatically private 
-	int item; 
-	LinkedList* next_element; 
-	LinkedList* previous_element;
+	Node *head; 
 
-	public:		
-		LinkedList(int a){
-			*next_element = NULL; 
-			*previous_element = NULL; 
-			item = a; 
-		}
-		//~LinkedList();
+	public:	
+		MyLinkedList(int);
+		void addElement(int); 
+}; 
 
-		void addElement() {
-			cout << "addElement" << endl; 
-		} 
+MyLinkedList::MyLinkedList(int a){
+	head = nullptr; 
+}
 
-		void deleteElement() {
-			cout << "deleteElement" << endl; 
-		}
-
-
-	
-} linkedList;
+void MyLinkedList::addElement(int newElem) {
+	node *tmp = new Node; 
+	cout << "addElement" << endl; 
+} 
 
 
 int main(int argc, char const *argv[])
 {
-	LinkedList list_1(3); 
-
-
 	return 0;
 }
 
