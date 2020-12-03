@@ -9,7 +9,6 @@ with open('day2_input.txt', 'r') as f:
 # solution: 456 valid entries
 
 valid_pw = 0
-entries = 0
 
 for pw_entry in passwords: 
 	remainder = pw_entry.split('-')
@@ -21,15 +20,21 @@ for pw_entry in passwords:
 	remainder = remainder[1].split('\n')
 	pw = remainder[0]
 
-	entries += 1
-	char_count = pw.count(letter)
-	if not(char_count < min_occurence or char_count > max_occurence):
+	# solution for part 1 
+	'''char_count = pw.count(letter)
+				if not(char_count < min_occurence or char_count > max_occurence):
+					valid_pw += 1'''
+
+	# solution for part 2 
+	pos_1 = min_occurence 
+	pos_2 = max_occurence
+
+	if pw[pos_1] == letter and pw[pos_2] != letter or \
+	   pw[pos_1] != letter and pw[pos_2] == letter:
+		
 		valid_pw += 1
 
-print(valid_pw, entries)
-
-# part 2 
-
+print(valid_pw)
 
 
 # EOF 
