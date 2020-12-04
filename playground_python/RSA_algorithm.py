@@ -3,6 +3,10 @@
 '''
 src: https://www.youtube.com/watch?v=4zahvcJ9glg
 
+https://www.bloggerdrive.com/understanding-and-implementing-rsa-algorithm-in-python/
+
+https://stackoverflow.com/questions/3312364/implementing-rsa-in-python
+
 PART 1: 
 
 This is an example of the RSA algorithm. 
