@@ -23,7 +23,6 @@ plain_message = '12' # value of plain message must be smaller than 2nd number in
 
 # The following lines are identical. 
 # However, pow() performs the operation more efficiently, according to python docs. 
-
 # encrypted_message = int(plain_message) ** encryption_numbers[0] % encryption_numbers[1]
 encrypted_message = pow(int(plain_message), encryption_numbers[0], encryption_numbers[1])
 
