@@ -25,7 +25,7 @@
 
 		toboggan_pos += 3'''
 
-# part 2 (more general)
+# part 2 (more general, includes solution to part 1)
 
 slopes = [(1,1) ,(3,1), (5,1), (7,1) ,(1,2)]
 trees_list = []
