@@ -3,6 +3,10 @@
 '''
 src: https://www.youtube.com/watch?v=4zahvcJ9glg
 
+https://www.bloggerdrive.com/understanding-and-implementing-rsa-algorithm-in-python/
+
+https://stackoverflow.com/questions/3312364/implementing-rsa-in-python
+
 PART 1: 
 
 This is an example of the RSA algorithm. 
@@ -23,7 +27,6 @@ plain_message = '12' # value of plain message must be smaller than 2nd number in
 
 # The following lines are identical. 
 # However, pow() performs the operation more efficiently, according to python docs. 
-
 # encrypted_message = int(plain_message) ** encryption_numbers[0] % encryption_numbers[1]
 encrypted_message = pow(int(plain_message), encryption_numbers[0], encryption_numbers[1])
 
