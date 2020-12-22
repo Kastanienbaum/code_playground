@@ -12,8 +12,9 @@ import collections
 # cid (Country ID)
 
 # part 2 
-def check_rules(pp):
-	pass
+def check_rules(checked):
+	if ()
+
 
 def check_validity(a, b):
 	# remove cid from list 
@@ -32,13 +33,18 @@ infile = 'day4_input.txt' # 'day4_sample.txt'
 
 # cid not needed 
 valid_credentials = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']
+
+# this dict is used for part 2 
 rules = {'byr': (1920, 2002), 
 		 'iyr': (2010, 2020), 
 		 'eyr': (2020, 2030), 
-		 'hgt': ((150, 193, 'cm'), (59, 76, 'in')), 
-		 'hcl': ('^#[0-9]\{6}'), # a '#' followed by exactly six characters 0-9 or a-f
+		 'hgt': (('cm', 150, 193), ('in', 59, 76)), 
+		 'hcl': ('^#[0-9a-fA-F]{6}'), # a '#' followed by exactly six characters in the range of 0-9 or a-f or A-F
 		 'ecl': ('amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth'), 
-		 'pid': (), }
+		 'pid': ('[0-9]{9}') # nine-digit number including leading zeroes 
+     }
+
+
 valid_passports = 0
 
 with open(infile, 'r') as f: 
