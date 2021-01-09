@@ -8,6 +8,7 @@ with open('day6_input.txt', 'r') as f:
     yes = []
     total = 0
     persons = 0
+    
     # read line, add new chars to list (no duplicates) 
     for line in f:
         if line == '\n':
@@ -24,6 +25,9 @@ with open('day6_input.txt', 'r') as f:
     # take last entry into account
     total += len(yes)
     print(total)
+
+    # part 2: Count the number of questions to which everyone answered "yes". 
+    # What is the sum of those counts?
 
 
 # EOF 
