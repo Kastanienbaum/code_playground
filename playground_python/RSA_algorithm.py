@@ -5,7 +5,10 @@ src: https://www.youtube.com/watch?v=4zahvcJ9glg
 
 https://www.bloggerdrive.com/understanding-and-implementing-rsa-algorithm-in-python/
 
-https://stackoverflow.com/questions/3312364/implementing-rsa-in-python
+https://stackoverflow.com/questions/3312364/implementing-rsa-in-python 
+
+Diffie-Hellman key exchange
+https://www.youtube.com/watch?v=M-0qt6tdHzk
 
 PART 1: 
 
