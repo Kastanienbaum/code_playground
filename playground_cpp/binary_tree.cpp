@@ -49,7 +49,7 @@ void BinaryTree::addNode(int v) {
 			if (now->left != nullptr && now->right != nullptr){now = now->left;}
 		else 
 			if (now->left != nullptr && now->right == nullptr){now->left = n;}
-		else
+		//else
 	}
 
 }
