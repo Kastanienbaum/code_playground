@@ -23,7 +23,7 @@ try:
 		f.write('The time is: '+
 			str(datetime.datetime.now() + timedelta(minutes=x))+ '\n')
 		for x in range(5):
-			f.write('Value ' + str(x) + ': ' + str(random.random()*20-5) + 'mV\n')
+			f.write('Value ' + str(x) + ': ' + str(random.random()*20-5+x*1.2) + 'mV\n')
 except Exception as e:
 	print('error: ', e)
 finally:
