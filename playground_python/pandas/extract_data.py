@@ -9,6 +9,11 @@ file2="data2.txt"
 indices = []
 data = []
 timestamps = []
+voltage0 = []
+voltage1 = []
+voltage2 = []
+voltage3 = []
+voltage4 = []
 voltages = []
 
 # extracting data from first file
@@ -41,18 +46,30 @@ try:
 			tmp = line.split("The time is: ")[1].strip()
 			timestamps.append(tmp)
 		#extract measured data points
-		if re.search(r'Value [0-9]:',line):
-			tmp = line.split()
+		#if re.search(r'Value [0-9]:',line):
+		if "Value 0: " in line:
+			tmp = re.search("\d+\.\d+", line)
+			voltage0.append(float(tmp.group(0)))
+		if "Value 1: " in line:
+			tmp = re.search("\d+\.\d+", line)
+			voltage1.append(float(tmp.group(0)))
 except Exception as e:
 	print('error: ', e)
 finally:
 	f.close()
 
-# create dataframe
+# create dataframe for 1st datafile
 zipped = list(zip(indices, data))
-df = pd.DataFrame(zipped, columns=['INDICES','FLOATS'])
+df1 = pd.DataFrame(zipped, columns=['INDICES','FLOATS'])
 
-df.plot(x='INDICES', y='FLOATS')
+df1.plot(x='INDICES', y='FLOATS')
+plt.show()
+
+# create dataframe for 2nd datafile
+zipped = list(zip(timestamps, voltage0, voltage1))
+df2 = pd.DataFrame(zipped, columns=['TIMESTAMPS','V0 [mV]','V1 [mV]'])
+
+df2.plot(x='TIMESTAMPS', y='V0 [mV]')
 plt.show()
 
 #visualize data
